@@ -1092,4 +1092,182 @@ h2 {
     margin-top: 15px;
     font-weight: bold;
     color: #87A96B;
+
+}
+
+/* Memory Section */
+.memory-section {
+  padding: 60px 5%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.memory-section .section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #4E342E;
+  margin-bottom: 10px;
+}
+
+.memory-section .section-title p {
+  color: #87A96B;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+/* Slider Container */
+.memory-slider {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.memory-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.memory-slider::-webkit-scrollbar-thumb {
+  background-color: #87A96B;
+  border-radius: 4px;
+}
+
+/* Each Card */
+.memory-card {
+  flex: 0 0 250px;
+  border: 1px solid #e0dcd6;
+  background-color: #f2eee9;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(78, 52, 46, 0.08);
+  scroll-snap-align: start;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.memory-card img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
+}
+
+.memory-card img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+.memory-card p {
+  font-size: 0.85rem;
+  color: #7a6a64;
+  line-height: 1.4;
+}
+
+/* Playlist Section */
+.playlist-section {
+  padding: 60px 5%;
+  background-color: #f2eee9;
+  text-align: center;
+}
+
+.playlist-section .section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #4E342E;
+  margin-bottom: 10px;
+}
+
+.playlist-section .section-title p {
+  color: #87A96B;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+/* Music Player Card */
+.music-player {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(78, 52, 46, 0.08);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  gap: 20px;
+}
+
+/* Thumbnail */
+.music-thumbnail img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Info */
+.music-info h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #4E342E;
+  margin: 0;
+}
+
+.music-info p {
+  font-size: 0.9rem;
+  color: #87A96B;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+.music-info audio {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.duration {
+  font-size: 0.8rem;
+  color: #7a6a64;
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline-section {
+    overflow-x: visible;
+  }
+
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .timeline-item {
+    flex: none;
+    width: 90%;
+  }
+
+  .timeline-item::before {
+    top: -20px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-gallery {
+    margin-top: 10px;
+  }
 }
