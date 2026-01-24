@@ -1271,3 +1271,87 @@ h2 {
     margin-top: 10px;
   }
 }
+
+.video-intro-section {
+    padding: 100px 10%;
+    background-color: #F9F6F2;
+    text-align: center;
+}
+
+.video-window {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Perfect horizontal cinematic ratio */
+    border-radius: 40px; /* Large rounded corners for a modern look */
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(78, 52, 46, 0.15);
+    background-color: #4E342E; /* Placeholder color while loading */
+}
+
+.intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the frame without stretching */
+    transition: transform 8s ease-in-out;
+}
+
+/* Very subtle zoom animation when the page loads */
+.video-window:hover .intro-video {
+    transform: scale(1.1);
+}
+
+/* Dark overlay to make text pop */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent 60%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    color: white;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+}
+
+.overlay-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.video-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.video-caption {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-caption p {
+    color: #7a6a64;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .video-intro-section {
+        padding: 60px 5%;
+    }
+    .overlay-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
